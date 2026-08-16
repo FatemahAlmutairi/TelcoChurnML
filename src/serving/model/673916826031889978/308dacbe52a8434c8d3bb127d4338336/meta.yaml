@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/fatii/Documents/projects/Churn/mlruns/673916826031889978/308dacbe52a8434c8d3bb127d4338336/artifacts
+end_time: 1786820666529
+entry_point_name: ''
+experiment_id: '673916826031889978'
+lifecycle_stage: active
+run_id: 308dacbe52a8434c8d3bb127d4338336
+run_name: auspicious-conch-495
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1786820656953
+status: 3
+tags: []
+user_id: fatii
