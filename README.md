@@ -7,6 +7,7 @@ Predict which telecom customers are likely to churn — so teams can act before 
 Run the container:
 
 docker pull fatemahalmutairi/telco-fastapi:latest
+
 docker run -p 8000:8000 fatemahalmutairi/telco-fastapi:latest
 
 Then access:
@@ -16,7 +17,7 @@ API endpoint: POST to /predict with customer data
 Health check: GET /health
 
 
-# Project Structure
+## Project Structure
 
 ├── src/
 │   ├── app.py              # FastAPI app with endpoints
