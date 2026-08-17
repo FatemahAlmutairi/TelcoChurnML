@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/fatii/Documents/projects/Churn/mlruns/202079270686103408/d9e45dbb0d7f4be18283396c595b30c9/artifacts
+end_time: 1786904891995
+entry_point_name: ''
+experiment_id: '202079270686103408'
+lifecycle_stage: active
+run_id: d9e45dbb0d7f4be18283396c595b30c9
+run_name: marvelous-duck-286
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1786904886030
+status: 4
+tags: []
+user_id: fatii

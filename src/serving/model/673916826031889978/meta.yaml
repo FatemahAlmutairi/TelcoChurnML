@@ -1,9 +1,0 @@
-artifact_location: file:///Users/fatii/Documents/projects/Churn/mlruns/673916826031889978
-creation_time: 1786820656850
-effective_trace_archival_retention: null
-experiment_id: '673916826031889978'
-last_update_time: 1786820656850
-lifecycle_stage: active
-name: Telco Churn - XGBoost
-trace_location: null
-workspace: default
