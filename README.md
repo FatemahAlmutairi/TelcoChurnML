@@ -17,7 +17,7 @@ API endpoint: POST to /predict with customer data
 Health check: GET /health
 
 
-## Project Structure
+# Project Structure
 
 ├── src/
 │   ├── app.py              # FastAPI app with endpoints
