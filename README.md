@@ -6,11 +6,13 @@ Predict which telecom customers are likely to churn — so teams can act before 
 
 Run the container:
 
-```bash docker pull fatemahalmutairi/telco-fastapi:latest docker run -p **8000**:**8000** fatemahalmutairi/telco-fastapi:latest Then access:
+docker pull fatemahalmutairi/telco-fastapi:latest docker run -p **8000**:**8000** fatemahalmutairi/telco-fastapi:latest Then access:
 
-Gradio UI: [http://localhost:**8000**/ui](http://localhost:**8000**/ui) **API** endpoint: **POST** to /predict with customer data Health check: **GET** /health ### Project Structure
+Gradio UI: [http://localhost:**8000**/ui](http://localhost:**8000**/ui) **API** endpoint: **POST** to /predict with customer data Health check: **GET** /health `
 
-text
+## Project Structure
+
+
 ├── src/
 │   ├── app.py              # FastAPI app with endpoints
 │   ├── inference.py        # Model loading and prediction logic
@@ -63,7 +65,8 @@ json
     *status*: *healthy*,
     *model_loaded*: true
 }
-Roadblocks & Fixes
+
+## Roadblocks & Fixes
 
 Issue	Solution
 Unhealthy **ALB** targets	Added **GET** / health endpoint; fixed listener/target port mismatches
@@ -72,7 +75,8 @@ Module import errors in container	Set **PYTHONPATH**=/app/src in Dockerfile
 **ECS** not picking up new image	Force new deployment via **CLI** or console
 Gradio *No runs found*	Standardized MLflow experiment name; inference loads logged model consistently
 Local vs. prod paths	Local loads from ./mlruns/; container loads packaged model at build time
-Requirements
+
+## Requirements
 
 Python 3.9+ Docker **AWS** account (for deployment) MLflow FastAPI + Gradio ### Local Development
 
@@ -90,7 +94,9 @@ docker run -p **8000**:**8000** telco-fastapi **AWS** Deployment (Terraform)
 
 bash cd terraform terraform init terraform plan terraform apply The infrastructure provisions:
 
-**ECS** Fargate cluster with the container Application Load Balancer with public endpoint Security groups with proper ingress/egress rules CloudWatch log group for container logs CI/CD Pipeline
+**ECS** Fargate cluster with the container Application Load Balancer with public endpoint Security groups with proper ingress/egress rules CloudWatch log group for container logs 
+
+## CI/CD Pipeline
 
 GitHub Actions workflow:
 
@@ -98,7 +104,9 @@ Lints Python code Runs unit tests Builds Docker image Pushes to Docker Hub (fate
 
 Application logs: CloudWatch Logs (/ecs/telco-fastapi) Container health: **ECS** service events in **AWS** Console Model performance: MLflow dashboard for tracking experiments **API** metrics: FastAPI built-in OpenTelemetry support Contributing
 
-Fork the repository Create a feature branch Commit your changes Push to the branch Open a Pull Request License
+Fork the repository Create a feature branch Commit your changes Push to the branch Open a Pull Request 
+
+## License
 
 **MIT** License - see **LICENSE** file for details
 
